@@ -45,6 +45,9 @@ function onDataReceived(text){
   else if(text === 'hello'){
     hello();
   }
+  else if(text === 'hello'){
+    return "hello!"
+  }
   else if (text === 'exit\n') {
     quit();
   }

@@ -44,6 +44,9 @@ function onDataReceived(text) {
   else if (text === 'exit\n') {
     quit();
   }
+  else if (text === 'help\n') {
+    return "hello, quit, exit"
+  }
   else{
     unknownCommand(text);
   }

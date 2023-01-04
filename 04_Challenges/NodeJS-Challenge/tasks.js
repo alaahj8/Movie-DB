@@ -57,6 +57,9 @@ function onDataReceived(text){
   else if (text === 'list\n') {
     list();
   }
+  else if (text === 'add\n') {
+    add(x);
+  }
   else{
     unknownCommand(text);
   }

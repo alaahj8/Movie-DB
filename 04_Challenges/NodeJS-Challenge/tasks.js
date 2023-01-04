@@ -54,6 +54,9 @@ function onDataReceived(text){
   else if (text === 'help\n') {
     return "hello, quit, exit,hello x, hello anyone"
   }
+  else if (text === 'list\n') {
+    list();
+  }
   else{
     unknownCommand(text);
   }
@@ -93,4 +96,5 @@ function quit(){
 }
 
 // The following line starts the application
-startApp("Jad Sarout")
+startApp("Alaa hijazi")
+

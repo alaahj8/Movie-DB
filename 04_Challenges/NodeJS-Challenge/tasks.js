@@ -52,7 +52,7 @@ function onDataReceived(text){
     quit();
   }
   else if (text === 'help\n') {
-    return "hello, quit, exit"
+    return "hello, quit, exit,hello x, hello anyone"
   }
   else{
     unknownCommand(text);

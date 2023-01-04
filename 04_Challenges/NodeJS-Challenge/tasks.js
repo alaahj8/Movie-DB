@@ -1,4 +1,6 @@
-
+/**
+ * help commend help you to choose the correct commands words
+ /**
 /**
  * Starts the application
  * This is the function that is run when the app starts

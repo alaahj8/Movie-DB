@@ -60,6 +60,9 @@ function onDataReceived(text){
   else if (text === 'add\n') {
     add(x);
   }
+  else if (text === 'remove\n') {
+    remove();
+  }
   else{
     unknownCommand(text);
   }

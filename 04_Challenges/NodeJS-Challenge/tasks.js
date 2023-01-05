@@ -84,8 +84,20 @@ function remove(text){
   
   if (text != removeEventListener[0,1,2]) {
     return "does not exist"
-  }
+  }}
 
+
+  function edit(text){
+    if (text =""){
+      return "error"
+    }
+    else if (text=tasks[2]){
+      return "new text"
+    }
+    else{
+      return "1 new text"
+    }
+  }
 /**
  * prints "unknown command"
  * This function is supposed to run when all other commands have failed

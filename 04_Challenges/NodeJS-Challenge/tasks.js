@@ -72,6 +72,7 @@ function onDataReceived(text){
 const list = ["hello", "quit", "help"];
 list.forEach(myFunction);
 
+
 const add = require("x");
 
 let remove = ["hello", "quit", "help"];
@@ -98,6 +99,21 @@ function remove(text){
       return "1 new text"
     }
   }
+  function model(hello, quit, help , add , list , remove) {
+    this.hello = hello;
+    this.quit = quit;
+    this.help = help;
+    this.add = add;
+    this.list = list;
+    this.remove = remove;
+  }
+  describe("done", function() {
+
+    it("checked", function() {
+      assert.equal(done(0,1,2));
+    });
+  
+  });
 /**
  * prints "unknown command"
  * This function is supposed to run when all other commands have failed

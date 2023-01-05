@@ -70,6 +70,7 @@ function onDataReceived(text){
 const list = ["hello", "quit", "help"];
 list.forEach(myFunction);
 
+const add = require("x");
 
 /**
  * prints "unknown command"

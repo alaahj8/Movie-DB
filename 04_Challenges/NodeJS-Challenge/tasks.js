@@ -67,6 +67,8 @@ function onDataReceived(text){
     unknownCommand(text);
   }
 }
+const list = ["hello", "quit", "help"];
+list.forEach(myFunction);
 
 
 /**

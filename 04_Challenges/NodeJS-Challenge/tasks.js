@@ -114,6 +114,13 @@ function remove(text){
     });
   
   });
+  describe("done", function() {
+
+    it("unchecked", function() {
+      assert.equal(done(0,1,2));
+    });
+  
+  });
 /**
  * prints "unknown command"
  * This function is supposed to run when all other commands have failed

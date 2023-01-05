@@ -80,6 +80,11 @@ let remove1 = ["hello", "quit", "help"];
 remove1.splice(0);
 let remove2 = ["hello", "quit", "help"];
 remove2.splice(1);
+function remove(text){
+  
+  if (text != removeEventListener[0,1,2]) {
+    return "does not exist"
+  }
 
 /**
  * prints "unknown command"

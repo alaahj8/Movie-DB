@@ -72,6 +72,13 @@ list.forEach(myFunction);
 
 const add = require("x");
 
+let remove = ["hello", "quit", "help"];
+remove.splice(2);
+let remove1 = ["hello", "quit", "help"];
+remove1.splice(0);
+let remove2 = ["hello", "quit", "help"];
+remove2.splice(1);
+
 /**
  * prints "unknown command"
  * This function is supposed to run when all other commands have failed

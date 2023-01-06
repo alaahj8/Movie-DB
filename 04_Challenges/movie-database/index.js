@@ -245,4 +245,22 @@ app.get(' url /movies/read/by-title',(req,res) => {
     }
 });
 
+app.get('url /movies/read/id/<ID>',(req,res) => {
+    const search = req.query.s;
+
+    if (typeof search != 'undefined') {
+        
+        const response = {status:200, data:movies };
+
+        res.send(response);
+    }
+    else {
+        const response = {status:404, error:true, message:'the movie <ID> does not exist'};
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
+
 

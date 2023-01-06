@@ -89,3 +89,100 @@ app.get('/search',(req,res) => {
     }
 });
 
+app.get('/movies/create',(req,res) => {
+    const search = req.query.s;
+
+    if (typeof search != 'undefined') {
+        // Search string applied
+        const response = {status:200, data:movies };
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "you have to provide a search"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
+app.get('/movies/read',(req,res) => {
+    const search = req.query.s;
+
+    if (typeof search != 'undefined') {
+        // Search string applied
+        const response = {status:200, data:movies };
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "you have to provide a search"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
+app.get('movies/update',(req,res) => {
+    const search = req.query.s;
+
+    if (typeof search != 'undefined') {
+        // Search string applied
+        const response = {status:200, data:movies };
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "you have to provide a search"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});app.get('movies/delete',(req,res) => {
+    const search = req.query.s;
+
+    if (typeof search != 'undefined') {
+        // Search string applied
+        const response = {status:200, data:movies };
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "you have to provide a search"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
+
+const movies = { title: 'Jaws', year: 1975, rating: 8 },{ title: 'Avatar', year: 2009, rating: 7.8 },{ title: 'Brazil', year: 1985, rating: 8 },{ title: 'The Shaw shank', year: 1992, rating: 6.2 }
+app.get('movies',(req,res) => {
+    const search = req.query.s;
+
+    if (typeof search != 'undefined') {
+        // Search string applied
+        const response = {status:200, data:movies };
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "you have to provide a search"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
+

@@ -10,14 +10,12 @@ app.listen(port, () => {
   console.log(`server running on port ${port}`)
 })
 
-app.get('/search',(req,res) => {
-    const search = req.query.s;
+app.get('url /test',(req,res) => {
+    const test = req.query.s;
 
-    if (typeof search != 'undefined') {
-        // Search string applied
-        const response = {
-            status:200, message:"ok", data: search
-        };
+    if (typeof test != 'undefined') {
+        
+        const response = {status:200, message:"ok"};
 
         res.send(response);
     }
@@ -31,13 +29,12 @@ app.get('/search',(req,res) => {
         res.send(response);
     }
 });
-app.get('/search',(req,res) => {
-    const search = req.query.s;
+app.get('url /time',(req,res) => {
+    const time = req.query.s;
 
-    if (typeof search != 'undefined') {
-        // Search string applied
-        const response = {status:200, message: TIME, data: search
-        };
+    if (typeof time != 'undefined') {
+       
+        const response = {status:200, message:time};
 
         res.send(response);
     }
@@ -51,3 +48,44 @@ app.get('/search',(req,res) => {
         res.send(response);
     }
 });
+
+app.get('url /hello/<ID> ',(req,res) => {
+    const hello = req.query.s;
+
+    if (typeof hello != 'undefined') {
+       
+        const response = {status:200, message:"Hello, <ID>"};
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "you have to provide a search"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
+
+app.get('/search',(req,res) => {
+    const search = req.query.s;
+
+    if (typeof search != 'undefined') {
+        // Search string applied
+        const response = {status:200, message:"ok", data:SEARCH};
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "you have to provide a search"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
+

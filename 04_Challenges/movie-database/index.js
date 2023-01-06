@@ -21,7 +21,7 @@ app.get('url /test',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: "OK"
         };
 
 
@@ -40,7 +40,7 @@ app.get('url /time',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: "14:20"
         };
 
 
@@ -60,7 +60,7 @@ app.get('url /hello/<ID> ',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: "Hello, <ID>"
         };
 
 
@@ -74,7 +74,7 @@ app.get('/search',(req,res) => {
 
     if (typeof search != 'undefined') {
         
-        const response = {status:200, message:"ok", data:SEARCH};
+        const response = {status:200,  data:SEARCH};
 
         res.send(response);
     }
@@ -100,7 +100,7 @@ app.get('/movies/create',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: ""
         };
 
 
@@ -119,7 +119,7 @@ app.get('/movies/read',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: ""
         };
 
 
@@ -138,7 +138,7 @@ app.get('movies/update',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: ""
         };
 
 
@@ -156,7 +156,7 @@ app.get('movies/update',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: ""
         };
 
 
@@ -198,7 +198,7 @@ app.get('url /movies/read/by-date',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: "ORDERED BY DATE"
         };
 
 
@@ -217,7 +217,7 @@ app.get('url /movies/read/by-rating',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: "ORDERED BY RATING"
         };
 
 
@@ -236,7 +236,7 @@ app.get(' url /movies/read/by-title',(req,res) => {
     }
     else {
         const response = {
-            status:500, error:true, message: "you have to provide a search"
+            status:500, error:true, message: "ORDERED BY TITLE"
         };
 
 
@@ -262,5 +262,23 @@ app.get('url /movies/read/id/<ID>',(req,res) => {
         res.send(response);
     }
 });
+app.get('url /movies/add?title=<TITLE>&year=<YEAR>&rating=<RATING>',(req,res) => {
+    const search = req.query.s;
 
+    if (typeof search != 'undefined') {
+        
+        const response = {title: TITLE, year: YEAR, rating: RATING};
+
+        res.send(response);
+    }
+    else {
+        const response = {
+            status:500, error:true, message: "{status:403, error:true, message:'you cannot create a movie without providing a title and a year'}"
+        };
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
 

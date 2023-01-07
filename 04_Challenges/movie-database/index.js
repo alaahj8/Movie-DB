@@ -299,3 +299,20 @@ app.get('url movies/delete/<ID>',(req,res) => {
         res.send(response);
     }
 });
+pp.get('url /movies/update/<ID>?title=<NEW_TITLE>',(req,res) => {
+    const update = req.query.s;
+
+    if (typeof update != 'undefined') {
+        
+        const response = "NEW TITLE"
+
+        res.send(response);
+    }
+    else {
+        const response = {status:404, error:true, message:' does not exist'};
+
+
+        res.status(500);
+        res.send(response);
+    }
+});

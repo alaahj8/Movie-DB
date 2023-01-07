@@ -316,3 +316,17 @@ pp.get('url /movies/update/<ID>?title=<NEW_TITLE>',(req,res) => {
         res.send(response);
     }
 });
+
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+
+app.use(express.json());
+
+app.listen(3000, () => {
+    console.log(`Server Started at ${3000}`)
+})
+"scripts": {
+    "start": "nodemon index.js"
+},

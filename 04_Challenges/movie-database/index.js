@@ -188,9 +188,9 @@ app.get('movies',(req,res) => {
 
 
 app.get('url /movies/read/by-date',(req,res) => {
-    const search = req.query.s;
+    const read = req.query.s;
 
-    if (typeof search != 'undefined') {
+    if (typeof read != 'undefined') {
         
         const response = {status:200, data:movies };
 
@@ -207,9 +207,9 @@ app.get('url /movies/read/by-date',(req,res) => {
     }
 });
 app.get('url /movies/read/by-rating',(req,res) => {
-    const search = req.query.s;
+    const read = req.query.s;
 
-    if (typeof search != 'undefined') {
+    if (typeof read != 'undefined') {
         
         const response = {status:200, data:movies };
 
@@ -226,9 +226,9 @@ app.get('url /movies/read/by-rating',(req,res) => {
     }
 });
 app.get(' url /movies/read/by-title',(req,res) => {
-    const search = req.query.s;
+    const read = req.query.s;
 
-    if (typeof search != 'undefined') {
+    if (typeof read != 'undefined') {
         
         const response = {status:200, data:movies };
 
@@ -246,9 +246,9 @@ app.get(' url /movies/read/by-title',(req,res) => {
 });
 
 app.get('url /movies/read/id/<ID>',(req,res) => {
-    const search = req.query.s;
+    const read = req.query.s;
 
-    if (typeof search != 'undefined') {
+    if (typeof read != 'undefined') {
         
         const response = {status:200, data:movies };
 
@@ -263,9 +263,9 @@ app.get('url /movies/read/id/<ID>',(req,res) => {
     }
 });
 app.get('url /movies/add?title=<TITLE>&year=<YEAR>&rating=<RATING>',(req,res) => {
-    const search = req.query.s;
+    const rating = req.query.s;
 
-    if (typeof search != 'undefined') {
+    if (typeof rating != 'undefined') {
         
         const response = {title: TITLE, year: YEAR, rating: RATING};
 
@@ -282,3 +282,20 @@ app.get('url /movies/add?title=<TITLE>&year=<YEAR>&rating=<RATING>',(req,res) =>
     }
 });
 
+app.get('url movies/delete/<ID>',(req,res) => {
+    const Delete = req.query.s;
+
+    if (typeof Delete != 'undefined') {
+        
+        const response = {status:200, data:movies };
+
+        res.send(response);
+    }
+    else {
+        const response = {status:404, error:true, message:'the movie <ID> does not exist'};
+
+
+        res.status(500);
+        res.send(response);
+    }
+});
